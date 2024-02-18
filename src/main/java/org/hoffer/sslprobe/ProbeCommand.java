@@ -58,8 +58,8 @@ public class ProbeCommand {
           KeyManagementException {
     try {
 
-      Probe probe = new Probe(host, port, truststore, keystore, password);
-      probe.probe();
+      Client client = new Client(host, port, truststore, keystore, password);
+      client.connect();
 
     } catch (SslProbeException e) {
       terminal.writer().println(e.getMessage());

@@ -15,7 +15,7 @@ import javax.net.ssl.SSLSocket;
 import org.springframework.shell.command.annotation.Command;
 
 @Command
-public class Probe {
+public class Client {
 
   final String host;
   final int port;
@@ -24,7 +24,7 @@ public class Probe {
   final String password;
   RemoteHostProbe hostProbe = new RemoteHostProbe(Duration.ofSeconds(3));
 
-  public Probe(String host, String port, String truststore, String keystore, String password) {
+  public Client(String host, String port, String truststore, String keystore, String password) {
     this.host = host;
     this.port = parsePort(port);
     this.truststore = truststore;
@@ -32,7 +32,7 @@ public class Probe {
     this.password = password;
   }
 
-  public SSLSession probe() {
+  public SSLSession connect() {
     try {
       RemoteHostProbe.HostStatus reachable = hostProbe.probe(host, port);
       if (reachable != REACHABLE) {
