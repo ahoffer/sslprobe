@@ -1,0 +1,8 @@
+#! /bin/bash
+
+#java -jar \
+#-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=127.0.0.1:8000 \
+#target/sslprobe-0.0.1-SNAPSHOT.jar ${@}
+
+java -jar \
+target/sslprobe-0.0.1-SNAPSHOT.jar "${@}"

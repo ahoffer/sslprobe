@@ -1,0 +1,12 @@
+Todo:
+
+
+Test:
+
+1. Bad keystore file path
+2. Bad truststore file path
+3. Host not reachable
+4. Host/port not listening
+5. Bad password
+
+Stand up a little SSL server and test positive and negatives test cases
