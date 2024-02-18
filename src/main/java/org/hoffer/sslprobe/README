@@ -8,5 +8,7 @@ Test:
 3. Host not reachable
 4. Host/port not listening
 5. Bad password
+6. keystores with no password
+7. truststore only
 
 Stand up a little SSL server and test positive and negatives test cases
